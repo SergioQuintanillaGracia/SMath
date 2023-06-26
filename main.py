@@ -1,7 +1,6 @@
 from tkinter import *
 from customtkinter import *
 import numpy as np
-import time
 
 current_version = 1.0
 
