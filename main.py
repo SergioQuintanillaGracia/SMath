@@ -2,6 +2,8 @@ from tkinter import *
 from customtkinter import *
 import numpy as np
 
+# Needs CustomTkinter 5.2.2
+
 current_version = 1.0
 
 WIDTH, HEIGHT = 800, 350
@@ -41,7 +43,7 @@ class dist_a_b():
 
         title = CTkLabel(
             text = "Distancia de A a B",
-            text_font = ("Arial", 16, "bold", UNDERLINE),
+            font = ("Arial", 20, "bold", UNDERLINE),
             master = program_frame,
             fg_color = "#9EA6A9",
             corner_radius = 6,
@@ -51,7 +53,7 @@ class dist_a_b():
 
         a_label = CTkLabel(
             text = f"A({spacing},{spacing},{spacing})",
-            text_font = ("Arial", 16, "bold"),
+            font = ("Arial", 24, "bold"),
             master = program_frame,
             fg_color = "#afb6c1",
             corner_radius = 6,
@@ -61,7 +63,7 @@ class dist_a_b():
 
         b_label = CTkLabel(
             text = f"B({spacing},{spacing},{spacing})",
-            text_font = ("Arial", 16, "bold"),
+            font = ("Arial", 24, "bold"),
             master = program_frame,
             fg_color = "#afb6c1",
             corner_radius = 6,
@@ -71,7 +73,7 @@ class dist_a_b():
 
         a1 = CTkEntry(
             placeholder_text = " a1",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = a_label,
             width = 62,
             height = 36,
@@ -82,7 +84,7 @@ class dist_a_b():
 
         a2 = CTkEntry(
             placeholder_text = " a2",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = a_label,
             width = 62,
             height = 36,
@@ -93,7 +95,7 @@ class dist_a_b():
 
         a3 = CTkEntry(
             placeholder_text = " a3",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = a_label,
             width = 62,
             height = 36,
@@ -104,7 +106,7 @@ class dist_a_b():
 
         b1 = CTkEntry(
             placeholder_text = " b1",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = b_label,
             width = 62,
             height = 36,
@@ -115,7 +117,7 @@ class dist_a_b():
 
         b2 = CTkEntry(
             placeholder_text = " b2",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = b_label,
             width = 62,
             height = 36,
@@ -126,7 +128,7 @@ class dist_a_b():
 
         b3 = CTkEntry(
             placeholder_text = " b3",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = b_label,
             width = 62,
             height = 36,
@@ -137,7 +139,7 @@ class dist_a_b():
 
         calculate_button = CTkButton(
             text = "Calcular",
-            text_font = ("Arial", 13),
+            font = ("Arial", 20),
             master = program_frame,
             fg_color = "#53ce69",
             hover = True,
@@ -151,7 +153,7 @@ class dist_a_b():
         result_label = CTkLabel(
             text = "RESULTADO: ",
             anchor = "w",
-            text_font = ("Arial", 13, "bold"),
+            font = ("Arial", 20, "bold"),
             master = program_frame,
             fg_color = "#9EA6A9",
             corner_radius = 20,
@@ -185,10 +187,10 @@ class dist_a_b():
 
             result = np.sqrt(pow(b1_ - a1_, 2) + pow(b2_ - a2_, 2) + pow(b3_ - a3_, 2))
 
-            result_label.config(text = f"RESULTADO: {round(result, 2)}u")
+            result_label.configure(text = f"RESULTADO: {round(result, 2)}u")
 
         except:
-            result_label.config(text = f"RESULTADO: ¡Rellena todos los campos!")
+            result_label.configure(text = f"RESULTADO: ¡Rellena todos los campos!")
 
 
 class dist_p_r():
@@ -202,7 +204,7 @@ class dist_p_r():
 
         title = CTkLabel(
             text = "Distancia de P a r",
-            text_font = ("Arial", 16, "bold", UNDERLINE),
+            font = ("Arial", 20, "bold", UNDERLINE),
             master = program_frame,
             fg_color = "#9EA6A9",
             corner_radius = 6,
@@ -212,7 +214,7 @@ class dist_p_r():
 
         p_label = CTkLabel(
             text = f"P({spacing},{spacing},{spacing})",
-            text_font = ("Arial", 16, "bold"),
+            font = ("Arial", 24, "bold"),
             master = program_frame,
             fg_color = "#afb6c1",
             corner_radius = 6,
@@ -222,7 +224,7 @@ class dist_p_r():
 
         a_label = CTkLabel(
             text = f"Ar({spacing},{spacing},{spacing})",
-            text_font = ("Arial", 16, "bold"),
+            font = ("Arial", 24, "bold"),
             master = program_frame,
             fg_color = "#afb6c1",
             corner_radius = 6,
@@ -232,7 +234,7 @@ class dist_p_r():
 
         v_label = CTkLabel(
             text = f"v({spacing},{spacing},{spacing})",
-            text_font = ("Arial", 16, "bold"),
+            font = ("Arial", 24, "bold"),
             master = program_frame,
             fg_color = "#afb6c1",
             corner_radius = 6,
@@ -242,7 +244,7 @@ class dist_p_r():
 
         p1 = CTkEntry(
             placeholder_text = " p1",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = p_label,
             width = 62,
             height = 36,
@@ -253,7 +255,7 @@ class dist_p_r():
 
         p2 = CTkEntry(
             placeholder_text = " p2",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = p_label,
             width = 62,
             height = 36,
@@ -264,7 +266,7 @@ class dist_p_r():
 
         p3 = CTkEntry(
             placeholder_text = " p3",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = p_label,
             width = 62,
             height = 36,
@@ -275,7 +277,7 @@ class dist_p_r():
 
         a1 = CTkEntry(
             placeholder_text = " a1",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = a_label,
             width = 62,
             height = 36,
@@ -286,7 +288,7 @@ class dist_p_r():
 
         a2 = CTkEntry(
             placeholder_text = " a2",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = a_label,
             width = 62,
             height = 36,
@@ -297,7 +299,7 @@ class dist_p_r():
 
         a3 = CTkEntry(
             placeholder_text = " a3",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = a_label,
             width = 62,
             height = 36,
@@ -308,7 +310,7 @@ class dist_p_r():
 
         v1 = CTkEntry(
             placeholder_text = " v1",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = v_label,
             width = 62,
             height = 36,
@@ -319,7 +321,7 @@ class dist_p_r():
 
         v2 = CTkEntry(
             placeholder_text = " v2",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = v_label,
             width = 62,
             height = 36,
@@ -330,7 +332,7 @@ class dist_p_r():
 
         v3 = CTkEntry(
             placeholder_text = " v3",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = v_label,
             width = 62,
             height = 36,
@@ -341,7 +343,7 @@ class dist_p_r():
 
         calculate_button = CTkButton(
             text = "Calcular",
-            text_font = ("Arial", 13),
+            font = ("Arial", 20),
             master = program_frame,
             fg_color = "#53ce69",
             hover = True,
@@ -355,7 +357,7 @@ class dist_p_r():
         result_label = CTkLabel(
             text = "RESULTADO: ",
             anchor = "w",
-            text_font = ("Arial", 13, "bold"),
+            font = ("Arial", 20, "bold"),
             master = program_frame,
             fg_color = "#9EA6A9",
             corner_radius = 20,
@@ -402,10 +404,10 @@ class dist_p_r():
         result = processed_cross_product / np.sqrt(pow(v1_, 2) + pow(v2_, 2) + pow(v3_, 3))
         print(result)
 
-        result_label.config(text = f"RESULTADO: {round(result, 2)}u")
+        result_label.configure(text = f"RESULTADO: {round(result, 2)}u")
 
         #except:
-        #    result_label.config(text = f"RESULTADO: ¡Rellena todos los campos!")
+        #    result_label.configure(text = f"RESULTADO: ¡Rellena todos los campos!")
 
 
 class dist_p_pl():
@@ -419,7 +421,7 @@ class dist_p_pl():
 
         title = CTkLabel(
             text = "Distancia de P a π",
-            text_font = ("Arial", 16, "bold", UNDERLINE),
+            font = ("Arial", 20, "bold", UNDERLINE),
             master = program_frame,
             fg_color = "#9EA6A9",
             corner_radius = 6,
@@ -429,7 +431,7 @@ class dist_p_pl():
 
         p_label = CTkLabel(
             text = f"P({spacing},{spacing},{spacing})",
-            text_font = ("Arial", 16, "bold"),
+            font = ("Arial", 24, "bold"),
             master = program_frame,
             fg_color = "#afb6c1",
             corner_radius = 6,
@@ -441,7 +443,7 @@ class dist_p_pl():
 
         pl_label = CTkLabel(
             text = f"π ≡ {spacing}x + {spacing}y + {spacing}z + {spacing} = 0",
-            text_font = ("Arial", 16, "bold"),
+            font = ("Arial", 24, "bold"),
             master = program_frame,
             fg_color = "#afb6c1",
             corner_radius = 6,
@@ -451,7 +453,7 @@ class dist_p_pl():
 
         p1 = CTkEntry(
             placeholder_text = " p1",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = p_label,
             width = 62,
             height = 36,
@@ -462,7 +464,7 @@ class dist_p_pl():
 
         p2 = CTkEntry(
             placeholder_text = " p2",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = p_label,
             width = 62,
             height = 36,
@@ -473,7 +475,7 @@ class dist_p_pl():
 
         p3 = CTkEntry(
             placeholder_text = " p3",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = p_label,
             width = 62,
             height = 36,
@@ -484,7 +486,7 @@ class dist_p_pl():
 
         pl1 = CTkEntry(
             placeholder_text = "  A",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = pl_label,
             width = 62,
             height = 36,
@@ -495,7 +497,7 @@ class dist_p_pl():
 
         pl2 = CTkEntry(
             placeholder_text = "  B",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = pl_label,
             width = 62,
             height = 36,
@@ -506,7 +508,7 @@ class dist_p_pl():
 
         pl3 = CTkEntry(
             placeholder_text = "  C",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = pl_label,
             width = 62,
             height = 36,
@@ -517,7 +519,7 @@ class dist_p_pl():
 
         pl4 = CTkEntry(
             placeholder_text = "  D",
-            text_font = ("Arial", 16),
+            font = ("Arial", 24),
             master = pl_label,
             width = 62,
             height = 36,
@@ -528,7 +530,7 @@ class dist_p_pl():
 
         calculate_button = CTkButton(
             text = "Calcular",
-            text_font = ("Arial", 13),
+            font = ("Arial", 21),
             master = program_frame,
             fg_color = "#53ce69",
             hover = True,
@@ -542,7 +544,7 @@ class dist_p_pl():
         result_label = CTkLabel(
             text = "RESULTADO: ",
             anchor = "w",
-            text_font = ("Arial", 13, "bold"),
+            font = ("Arial", 21, "bold"),
             master = program_frame,
             fg_color = "#9EA6A9",
             corner_radius = 20,
@@ -578,10 +580,10 @@ class dist_p_pl():
 
             result = abs(pl1_ * p1_ + pl2_ * p2_ + pl3_ * p3_ + pl4_) / np.sqrt(pow(pl1_, 2) + pow(pl2_, 2) + pow(pl3_, 2))
 
-            result_label.config(text = f"RESULTADO: {round(result, 2)}u")
+            result_label.configure(text = f"RESULTADO: {round(result, 2)}u")
 
         except:
-            result_label.config(text = f"RESULTADO: ¡Rellena todos los campos!")
+            result_label.configure(text = f"RESULTADO: ¡Rellena todos los campos!")
 
 
 button_frame = CTkFrame(
@@ -603,7 +605,7 @@ program_frame.place(x = 280, y = 10)
 
 calculate_button = CTkButton(
     text = "Distancia de A a B",
-    text_font = ("Arial", 13),
+    font = ("Arial", 20),
     master = button_frame,
     fg_color = "#41A7EE",
     hover = True,
@@ -616,7 +618,7 @@ calculate_button.place(x = padding, y = padding)
 
 dist_p_r_button = CTkButton(
     text = "Distancia de P a r",
-    text_font = ("Arial", 13),
+    font = ("Arial", 20),
     master = button_frame,
     fg_color = "#41A7EE",
     hover = True,
@@ -629,7 +631,7 @@ dist_p_r_button.place(x = padding, y = padding * 2 + button_height)
 
 dist_p_pl_button = CTkButton(
     text = "Distancia de P a π",
-    text_font = ("Arial", 13),
+    font = ("Arial", 20),
     master = button_frame,
     fg_color = "#41A7EE",
     hover = True,
